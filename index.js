@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateReadme = require ("./utils/generateMarkdown");
+const fs = require('fs');
+const generateMarkdown = require ("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
         {
             type: 'input',
             name: 'name',
@@ -56,17 +56,90 @@ const questions = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'Please give instructions on how to test your project. (Leave blank if no test instuctions are needed.)'
+        },
+        {
+            type: 'confirm',
+            name: 'contribute',
+            message: 'Would you like others to be able to contribute to your project?',
+            default: true
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'Please select a license.',
+            choices: [
+                'gpl-3.0',
+                'agpl-3.0',
+                'apache-2.0',
+                'mit',
+                'unlicense',
+            ]
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your Github Username.',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log ('Please enter your Github Username!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter an email address where users can reach you.',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your email address!')
+                    return false;
+                }
+            }
         }
-    ]);
-};
+];
 
-questions();
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(`./dist/readme.md`, data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    return inquirer.prompt(questions);  
+};
 
 // Function call to initialize app
-init();
+init()
+    .then(userInput => {
+        return generateMarkdown(userInput);
+    })
+    .then(readmeInfo => {
+        return writeToFile(readmeInfo);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
