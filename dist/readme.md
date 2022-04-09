@@ -1,9 +1,9 @@
-# Readme Generator ![gpl3.0 License](https://img.shields.io/badge/license-gpl3.0-blue)
+# readme-generator ![gpl3.0 License](https://img.shields.io/badge/license-gpl3.0-blue)
 
   # About
-  Readme Generator takes a list of prompts from the user and uses them to create a markdown page to use as the readme of their project. It includes information for using, installing, testing, and contributing to the project, as well as licensing information and contact information in case someone wishes to reach out to the project author.
-
-  ## Table of Contents 
+  Readme Generator generates a markdown file based on your answers to a series of questions. This simplifies the process of making a meaningful markdown that others can easily understand. The readme will include the name, installation, instructions, and guidelines to contributing to your project.
+  
+  ## Table of Contents
   - [Intallation](#installation)
   - [Usage](#usage)
   - [Credit](#credit)
@@ -13,25 +13,25 @@
   - [Questions](#test)
 
   # Installation
-  Clone the github repo. Open the project in your preffered environment. Run npm install, as this project includes a package.json file that sources packages that are required in order for the project to properly collect your responses and generate the markdown file. 
+  Download the files from the Github repository. Access the folder from your terminal, and run >npm install< as the application does require npm packages that are not included in the repository. After running this command, everything will be installed for you. Information on these can be found in the package.json file included in the application. 
 
   # Usage
-  This is a simple, automated way to create your own readme file without worrying about taking too much time to format and write licensing info. This gives you more time to work on the project itself. 
+  Once you have the packages installed, run index.js and the questions will begin appearing in your terminal. Please answer these questions as meaningfully and descriptively as possible, as these answers is what will determine the content of the readme that will be generated. If you attempt to submit any prompt without an answer, you will be given an error and asked to resubmit. Once you have finished answering the prompts, a readme.md file will be created inside of the dist folder in the location where you saved and ran the repo from.  
 
   # Credit
-  undefined
+  Created by Austin Carter. 
 
   # License
-  This project is covered under the gpl3.0 license. For more information, visit the [license overview](https://choosealicense.com/licenses/) page.
+  This project is covered under the gpl3.0 license. For more information, visit this [resource](https://choosealicense.com/licenses/) on project licenses.
 
   # Contributing 
-  false
+  No contributions are accepted at this time.
 
   # Tests
-  No testing files are included, simply run the file, enter the data, and review the markdown to ensure it meets your standards for how you would like your project to be represented. 
+  No testing files included. Simply run the application, answer the questions, and check the markdown for any errors, and make sure the readme is up to your standards to be included in your project. 
 
   # Questions
-  If you have any questions, you can find me on [github](https://github.com/undefined).
+  If you have any questions, you can find me on [github](https://github.com/auscarter17).
   You may also email me at auscarter17@gmail.com 
   
 

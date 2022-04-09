@@ -60,7 +60,7 @@ const questions = [
         {
             type: 'input',
             name: 'usage',
-            message: 'Please describe how your project is used. Provide examples to help users understand how your project can be applied to their personal use.',
+            message: 'Please describe how your project is used.',
             validate: usageInput => {
                 if (usageInput) {
                     return true;
