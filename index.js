@@ -7,7 +7,7 @@ const generateMarkdown = require ("./utils/generateMarkdown");
 const questions = [
         {
             type: 'input',
-            name: 'name',
+            name: 'title',
             message: 'What is the name of your project?',
             validate: nameInput => {
                 if (nameInput) {
@@ -65,17 +65,16 @@ const questions = [
         {
             type: 'confirm',
             name: 'contribute',
-            message: 'Would you like others to be able to contribute to your project?',
-            default: true
+            message: 'Please enter any instructions/guidelines to contributing to the project.'
         },
         {
             type: 'list',
             name: 'license',
             message: 'Please select a license.',
             choices: [
-                'gpl-3.0',
-                'agpl-3.0',
-                'apache-2.0',
+                'gpl3.0',
+                'agpl3.0',
+                'apache2.0',
                 'mit',
                 'unlicense',
             ]
