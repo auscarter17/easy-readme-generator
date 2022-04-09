@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   # Questions
-  If you have any questions, you can find me on [github](https://github.com/${data.user}).
+  If you have any questions, you can find me on [github](https://github.com/${data.github}).
   You may also email me at ${data.email} 
   
 

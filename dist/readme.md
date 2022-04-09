@@ -3,7 +3,7 @@
   # About
   Readme Generator takes a list of prompts from the user and uses them to create a markdown page to use as the readme of their project. It includes information for using, installing, testing, and contributing to the project, as well as licensing information and contact information in case someone wishes to reach out to the project author.
 
-  ## Table of Contents
+  ## Table of Contents 
   - [Intallation](#installation)
   - [Usage](#usage)
   - [Credit](#credit)

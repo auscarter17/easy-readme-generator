@@ -7,10 +7,23 @@ const generateMarkdown = require ("./utils/generateMarkdown");
 const questions = [
         {
             type: 'input',
-            name: 'title',
-            message: 'What is the name of your project?',
+            name: 'name',
+            message: 'What is your full name?',
             validate: nameInput => {
                 if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the name of your project?',
+            validate: titleInput => {
+                if (titleInput) {
                     return true;
                 } else {
                     console.log('Please enter a name for your project!');
@@ -60,12 +73,28 @@ const questions = [
         {
             type: 'input',
             name: 'test',
-            message: 'Please give instructions on how to test your project. (Leave blank if no test instuctions are needed.)'
+            message: 'Please give instructions on how to test your project.',
+            validate: testInput => {
+                if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name for your project!');
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
+            type: 'input',
             name: 'contribute',
-            message: 'Please enter any instructions/guidelines to contributing to the project.'
+            message: 'Please enter any instructions/guidelines to contributing to the project.',
+            validate: contributeInput => {
+                if (contributeInput) {
+                    return true;
+                } else {
+                    console.log('Please include instructions for contributing to your project!');
+                    return false;
+                }
+            }
         },
         {
             type: 'list',
@@ -138,7 +167,6 @@ init()
     .then(readmeInfo => {
         return writeToFile(readmeInfo);
     })
-    .catch(err => {
-        console.log(err);
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse.message);
     })
-
