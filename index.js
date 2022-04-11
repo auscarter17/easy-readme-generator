@@ -34,7 +34,7 @@ const questions = [
         {
             type: 'input',
             name: 'description',
-            message: 'Please provide a description for your project. Be descriptive, and include the what, why, and how of your project.',
+            message: 'Please provide a description for your project.',
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -47,12 +47,12 @@ const questions = [
         {
             type: 'input',
             name: 'installation',
-            message: 'Please provide steps to installing your project. Be desriptive so any user can understand your instructions.',
+            message: 'Please provide steps to installing your project.',
             validate: installationInput => {
                 if (installationInput) {
                     return true;
                 } else {
-                    console.log('Please describe the installation process for your project. Without clear instructions, users may be unable to try out your project.');
+                    console.log('Please describe the installation process for your project.');
                     return false;
                 }
             }

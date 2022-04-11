@@ -9,7 +9,7 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [Credit](#credit)
   - [License](#license)
-  - [Contributing](#contibuting)
+  - [Contribute](#contribute)
   - [Tests](#test)
   - [Questions](#test)
 
@@ -25,7 +25,7 @@ function generateMarkdown(data) {
   # License
   This project is covered under the ${data.license} license. For more information, visit this [resource](https://choosealicense.com/licenses/) on project licenses.
 
-  # Contributing 
+  # Contribute 
   ${data.contribute}
 
   # Tests
