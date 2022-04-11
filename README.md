@@ -17,6 +17,7 @@
 
   # Usage
   Once you have the packages installed, run index.js and the questions will begin appearing in your terminal. Please answer these questions as meaningfully and descriptively as possible, as these answers is what will determine the content of the readme that will be generated. If you attempt to submit any prompt without an answer, you will be given an error and asked to resubmit. Once you have finished answering the prompts, a readme.md file will be created inside of the dist folder in the location where you saved and ran the repo from.
+  You can see the application in use in this [demo video.](https://drive.google.com/file/d/15NZdbK-gPdKMo064WNsrNdT3alqX0YzM/view?usp=sharing)
 
   # Credit
   Created by Austin Carter. 
